@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class Pratik9 {
+    public static void main(String[] args) {
+        String userName, password,answer, newPassword;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Kullanici Adi: " );
+        userName = input.nextLine();
+
+        System.out.print("Sifre: " );
+        password = input.nextLine();
+
+        if (userName.equals("patika") && password.equals("java123")) {
+            System.out.println("Giris yapildi!");
+
+        } else {
+            System.out.println("Sifre yanlis!");
+            System.out.print("Sifrenizi mi unuttunuz? ");
+            answer = input.nextLine();
+
+            if (answer.equals("Y")) {
+                System.out.print("Yeni sifrenizi giriniz: ");
+                newPassword = input.nextLine();
+
+                if (newPassword.equals ("java123")) {
+                    System.out.println("Sifreniz eskisiyle ayni! Lutfen tekrar deneyiniz.");
+
+                } else {
+                    password = newPassword ;
+                    System.out.println("Sifre basariyla olusturuldu!");
+
+                }
+            }
+
+
+
+            
+        }
+    }
+}
